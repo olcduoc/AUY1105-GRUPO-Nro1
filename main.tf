@@ -4,7 +4,7 @@
 # ─────────────────────────────────────────────────────────────
 
 module "redes" {
-  source = "github.com/olcduoc/terraform-aws-vpc-AUY1105-grupo-1?ref=v1.0.0"
+  source = "github.com/olcduoc/terraform-aws-vpc-AUY1105-grupo-1?ref=9ff22fc7badf7e44230ca94e854834b3ad5fa16f"
 
   project_name        = var.project_name
   vpc_cidr            = "10.1.0.0/16"
@@ -14,7 +14,7 @@ module "redes" {
 }
 
 module "computo" {
-  source = "github.com/olcduoc/terraform-aws-ec2-AUY1105-grupo-1?ref=v1.0.0"
+  source = "github.com/olcduoc/terraform-aws-ec2-AUY1105-grupo-1?ref=8ee259e5b942b04cdb5892828a996de24b29e721"
 
   project_name      = var.project_name
   subnet_id         = module.redes.subnet_ids[0]
